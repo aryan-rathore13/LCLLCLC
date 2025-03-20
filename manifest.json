@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "LeetCode Reminder",
+    "version": "1.0",
+    "permissions": ["activeTab", "storage"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }

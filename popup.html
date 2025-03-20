@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LeetCode Reminder</title>
+  <meta charset="UTF-8">
+  <link href="dist/tailwind.css" rel="stylesheet">
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { animation: fadeIn 0.3s ease-out; }
+  </style>
+</head>
+<body class="text-white font-sans min-w-[400px] min-h-[500px] p-6 rounded-lg shadow-2xl transition-colors duration-300" id="body">
+  <div class="flex items-center justify-between mb-6">
+    <h1 class="text-2xl font-bold tracking-tight text-indigo-200">LeetCode Reminder</h1>
+    <select id="bgSelector" class="bg-gray-800 text-white border border-gray-700 rounded-md p-1 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <option value="bg1">Dark Nebula</option>
+      <option value="bg2">Ocean Twilight</option>
+      <option value="bg3">Cosmic Dawn</option>
+    </select>
+  </div>
+
+  <div class="mb-6">
+    <button id="addList" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 ease-in-out transform hover:scale-105 shadow-md">Create New List</button>
+  </div>
+
+  <div id="listForm" class="mb-6 hidden">
+    <input id="listName" type="text" placeholder="List Name (e.g., Arrays)" class="w-full bg-gray-900 text-white border border-gray-600 rounded-lg py-3 px-4 mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-400 transition-all duration-200" />
+    <button id="saveList" class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 ease-in-out transform hover:scale-105 shadow-md">Save List</button>
+  </div>
+
+  <div id="lists" class="space-y-4"></div>
+
+  <div id="questionForm" class="mt-6 hidden">
+    <select id="listSelect" class="w-full bg-gray-900 text-white border border-gray-600 rounded-lg py-3 px-4 mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500"></select>
+    <input id="days" type="number" min="1" placeholder="Remind me in (days)" class="w-full bg-gray-900 text-white border border-gray-600 rounded-lg py-3 px-4 mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-400 transition-all duration-200" />
+    <input id="email" type="email" placeholder="Your Email" class="w-full bg-gray-900 text-white border border-gray-600 rounded-lg py-3 px-4 mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-400 transition-all duration-200" />
+    <button id="saveReminder" class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 ease-in-out transform hover:scale-105 shadow-md">Set Reminder</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
